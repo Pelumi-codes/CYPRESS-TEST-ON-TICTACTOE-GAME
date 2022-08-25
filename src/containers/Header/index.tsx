@@ -21,11 +21,17 @@ export const Header = ({
         </div>
       </div>
       <div className={classNames.current}>
-        <div className={classNames.icon}>{currentPlayer}</div>
+        <div className={classNames.icon}>
+          {currentPlayer === SquareType.X ? (
+            <i className='material-icons'>&#10006;</i>
+          ) : (
+            <i className='material-icons'>&#11096;</i>
+          )}
+        </div>
         Turn
       </div>
       <div role='button' onClick={resetGame} className={classNames.reset}>
-        R
+        <i className='material-icons'>&#xe5d5;</i>
       </div>
     </div>
   );

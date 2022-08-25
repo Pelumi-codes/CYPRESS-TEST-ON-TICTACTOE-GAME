@@ -1,6 +1,6 @@
 import React, { useCallback, useEffect } from 'react';
 import './App.css';
-import { Board, Header, Footer } from 'containers';
+import { Board, Header, Footer, ScoreModal } from 'containers';
 import { GameState, SquareType } from 'types/enum';
 import { Score } from 'types';
 import { useScoreStorage } from 'hooks';
@@ -19,7 +19,7 @@ const winCombinations = [
 function App() {
   const [squares, setSquares] = React.useState(Array(9).fill(SquareType.EMPTY));
   const [currentPlayer, setCurrentPlayer] = React.useState(SquareType.X);
-  const [gameState, setGameState] = React.useState(GameState.IN_PROGRESS);
+  const [gameState, setGameState] = React.useState(GameState.TIE);
   const [score, setScore] = React.useState<Score>({
     x: 0,
     tie: 0,
@@ -53,6 +53,8 @@ function App() {
     setGameState(GameState.IN_PROGRESS);
     setCurrentPlayer(SquareType.X);
   };
+
+  const onQuitGame = () => {};
 
   const hasPlayableSquares = squares.some(
     (square) => square === SquareType.EMPTY
@@ -107,6 +109,7 @@ function App() {
         <Header currentPlayer={currentPlayer} resetGame={resetGame} />
         <Board squares={squares} onClick={handleClick} />
         <Footer score={score} isCpu={false} />
+
         {/* {gameState === GameState.IN_PROGRESS ? null : gameState ===
           GameState.TIE ? (
           <div>tie</div>
@@ -114,6 +117,9 @@ function App() {
           <div>winner {gameState}</div>
         )} */}
       </div>
+      {gameState !== GameState.IN_PROGRESS && (
+        <ScoreModal winner={gameState} isCpu={false} onNext={resetGame} />
+      )}
     </div>
   );
 }
