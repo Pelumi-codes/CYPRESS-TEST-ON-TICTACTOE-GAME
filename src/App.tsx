@@ -30,12 +30,15 @@ function App() {
   useScoreStorage({ score, setScore });
 
   const handleClick = (index: number) => () => {
-    if (gameState === GameState.IN_PROGRESS) {
+    const currentSquare = squares[index];
+
+    if (
+      gameState === GameState.IN_PROGRESS &&
+      currentSquare === SquareType.EMPTY
+    ) {
       setSquares((prev) => {
         const newSquares = [...prev];
-        if (newSquares[index] === SquareType.EMPTY) {
-          newSquares[index] = currentPlayer;
-        }
+        newSquares[index] = currentPlayer;
         return newSquares;
       });
 
