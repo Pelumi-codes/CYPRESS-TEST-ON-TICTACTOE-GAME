@@ -14,7 +14,7 @@ export const useScoreStorage = ({
       const storageScore = JSON.parse(storage);
       setScore(storageScore);
     }
-  }, []);
+  }, [setScore]);
 
   useEffect(() => {
     if (score.x === 0 && score.tie === 0 && score.o === 0 && score.cpu === 0) {
