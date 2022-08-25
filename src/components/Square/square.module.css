@@ -1,0 +1,20 @@
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: #1f3540;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 5px 0 #11202a;
+  cursor: pointer;
+}
+
+.square:hover {
+  box-shadow: 0 5px 0 #11202a;
+}
+
+.square:active {
+  box-shadow: 0 2px 0 #11202a;
+  transform: translateY(3px);
+}

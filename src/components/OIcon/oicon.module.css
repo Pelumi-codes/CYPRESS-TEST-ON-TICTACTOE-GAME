@@ -1,0 +1,8 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.2s ease-in-out;
+  border: 15px solid #f0b13c;
+  background-color: #1f3540;
+}

@@ -1,0 +1,34 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5px 8px;
+  border-radius: 4px;
+  flex: 1;
+  font-weight: bold;
+  font-size: 15px;
+  color: #192a33;
+}
+
+.x {
+  background-color: #30c4be;
+}
+
+.tie {
+  background-color: #a7bfc9;
+  margin: 0 15px;
+}
+
+.o {
+  background-color: #f0b13c;
+}
+.tiny {
+  font-size: 8px;
+  margin-bottom: 2px;
+}

@@ -8,5 +8,15 @@ tie - when board is full and no winner
 winner - when a player has 3 in a row on any direction
 
 game mechanics
+board1 = [
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
+] 
 
+board2 = [
+    1, 2, 3,
+    4, 5, 6,
+    7, 8, 9
+]
 
