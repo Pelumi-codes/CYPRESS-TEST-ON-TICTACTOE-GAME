@@ -1,0 +1,12 @@
+Tic-tac-toe game
+
+players - computer, multiplayer
+turns - random at game start
+
+
+tie - when board is full and no winner
+winner - when a player has 3 in a row on any direction
+
+game mechanics
+
+
