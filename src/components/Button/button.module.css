@@ -26,6 +26,18 @@
   box-shadow: 0 2px 0 #5c6d7b;
 }
 
+.alternate {
+  background-color: #30c4be;
+  box-shadow: 0 5px 0 #299695;
+}
+.alternate:active {
+  box-shadow: 0 2px 0 #299695;
+}
+
 .button:active {
   transform: translateY(3px);
+}
+
+.full {
+  width: 100%;
 }

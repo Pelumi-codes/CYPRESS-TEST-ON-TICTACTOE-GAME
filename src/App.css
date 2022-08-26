@@ -8,3 +8,49 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.think-box {
+  height: 5px;
+}
+.thinking {
+  width: 5px;
+  height: 5px;
+  background-color: #30c4be;
+  border-radius: 50%;
+  animation: thinking 1s infinite;
+  margin-top: 20px;
+  position: relative;
+}
+
+.thinking:before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #30c4be;
+  border-radius: 50%;
+  animation: thinking 1s infinite 0.5s;
+  position: absolute;
+  left: -10px;
+}
+
+.thinking:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background-color: #30c4be;
+  border-radius: 50%;
+  animation: thinking 1s infinite 1s;
+  position: absolute;
+  right: -10px;
+}
+
+@keyframes thinking {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

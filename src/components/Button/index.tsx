@@ -5,14 +5,20 @@ export const Button = ({
   onClick,
   variant = 'primary',
   children,
+  full,
 }: {
   onClick?: () => void;
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary' | 'alternate';
   children?: React.ReactNode;
+  full?: boolean;
 }) => {
   const className = classNames[variant];
   return (
-    <button className={`${classNames.button} ${className}`} onClick={onClick}>
+    <button
+      className={`${classNames.button} ${className} ${
+        full ? classNames.full : ''
+      }`}
+      onClick={onClick}>
       {children}
     </button>
   );

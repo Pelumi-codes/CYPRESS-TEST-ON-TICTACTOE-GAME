@@ -1,0 +1,13 @@
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.icon,
+.icon2 {
+  transform: scale(0.4);
+}
+
+.icon2 {
+  margin-left: -18px;
+}
