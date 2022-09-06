@@ -37,7 +37,7 @@ export const Header = ({
         </div>
       </div>
       <div className={classNames.item3}>
-        <div role='button' onClick={onOpen} className={classNames.reset}>
+        <div role='button' onClick={onOpen} className={classNames.reset} data-testid="restart-game">
           <i className='material-icons'>&#xe5d5;</i>
         </div>
       </div>

@@ -21,7 +21,7 @@ export const RestartModal = ({
           <div className={classNames.inner}>RESTART GAME?</div>
         </div>
         <div className={classNames.footer}>
-          <Button onClick={onCancel} variant='secondary'>
+          <Button onClick={onCancel} variant='secondary' data-testid="cancel-restart">
             NO, CANCEL
           </Button>
           <span>

@@ -28,12 +28,12 @@ export const Menu = ({
             className={`${classNames.select} ${
               classNames[playerType === SquareType.X ? 'x' : 'o']
             }`}>
-            <div className={classNames.item}>
+            <div className={classNames.item} data-cy="x-letter">
               <XIcon
-                state={playerType === SquareType.X ? 'active' : 'inactive'}
+                state={playerType === SquareType.X ? 'active' : 'inactive'} 
               />
             </div>
-            <div className={classNames.item}>
+            <div className={classNames.item} data-cy="o-letter">
               <OIcon
                 state={playerType === SquareType.O ? 'active' : 'inactive'}
               />
@@ -42,7 +42,7 @@ export const Menu = ({
           <div className={classNames.bottomText}>REMEMBER, X GOES FIRST</div>
         </div>
 
-        <Button onClick={startGame(true)} full>
+        <Button onClick={startGame(true)} full data-cy="start-game">
           NEW GAME (VS CPU)
         </Button>
         <div className={classNames.foot}>

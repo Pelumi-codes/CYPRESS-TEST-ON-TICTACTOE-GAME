@@ -13,5 +13,5 @@ const getStyle = (type?: 'active' | 'inactive') => {
 };
 
 export const OIcon = ({ state }: { state?: 'active' | 'inactive' }) => {
-  return <div className={`${classNames.icon} ${getStyle(state)}`} />;
+  return <div data-cy="click-o" className={`${classNames.icon} ${getStyle(state)}`} />;
 };

@@ -11,7 +11,7 @@ export const Board = ({
   onClick?: (index: number) => () => void;
 }) => {
   return (
-    <div className={classNames.board}>
+    <div className={classNames.board} data-cy="game-board">
       {squares.map((value, index) => {
         return <Square onClick={onClick?.(index)} key={index} value={value} />;
       })}
